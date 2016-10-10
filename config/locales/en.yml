@@ -1,23 +1,38 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  home:  "HOME"
+  header_log_in: "LOG IN"
+  header_sign_up: "SIGN UP"
+  e_learning: "E-LEARNING"
+  base_title: "Elearning - Simple tool for learning everything!"
+  slogan: "Simple tools for learning anything"
+  banner_description: "Search millions of study sets or create your own. Improve your grades
+    by studying with flashcards, games and more"
+  background_1_title: "LANGUAGES"
+  background_1_quotes: "One language sets you in a corridor for life. Two
+    languages open every door along the way."
+  background_1_quotes_author: "Frank Smith"
+  english: "English"
+  japan: "日本語"
+  french: "Français"
+  background_2_title: "1000,000 Study Sets and Counting"
+  background_2_quotes: "More than 95% of students who learn with E-learning improved their grades
+    . See how E-learning's simple tools can help you learn anything, from
+    beginning algebra, to college level econometrics — and beyond"
+  course_name: "Course 1"
+  course_date_published: "Mon. 8 October 2016"
+  button_learn: "Learn!"
+  footer_log_in: "Sign up"
+  footer_help_center: "Help center"
+  footer_mobile: "Mobile"
+  footer_students: "Students"
+  footer_teacher: "Teacher"
+  footer_help: "Help"
+  footer_about: "About"
+  footer_follow: "Follow us"
+  about: "We believe learning is more powerful when it’s a shared
+  experience—connecting with others learning the same thing.
+  E-learning is a place where everyone can share knowledge in any subject,
+  at any level and gain confidence as a learner."
+  help: "Welcome to Quizlet! Quizlet provides free study tools for students,
+    teachers, and learners of all ages that can be used in and out of the
+    classroom."
