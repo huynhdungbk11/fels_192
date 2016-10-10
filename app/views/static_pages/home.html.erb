@@ -1,7 +1,7 @@
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-      <img src="/assets/background-3.jpg">
+      <%= image_tag("background-3.jpg") %>
       <div class="carousel-caption">
         <h3><%= t "slogan" %></h3>
         <p><%= t "banner_description" %></p>
@@ -18,19 +18,19 @@
       <div class="col-sm-4">
         <h4 class="text-center"><strong><%= t "english" %></strong></h4><br>
         <a href="#" data-toggle="collapse">
-          <img src="/assets/english.jpg" class="img-circle person">
+          <%= image_tag("english.jpg", class: "img-circle person") %>
         </a>
       </div>
       <div class="col-sm-4">
         <h4 class="text-center"><strong><%= t "japan" %></strong></h4><br>
         <a href="#demo2" data-toggle="collapse">
-          <img src="/assets/japanese.jpg" class="img-circle person">
+          <%= image_tag("japanese.jpg", class: "img-circle person") %>
         </a>
       </div>
       <div class="col-sm-4">
         <h4 class="text-center"><strong><%= t "french" %></strong></h4><br>
         <a href="#demo3" data-toggle="collapse">
-          <img src="/assets/french.jpg" class="img-circle person">
+          <%= image_tag("french.jpg", class: "img-circle person") %>
         </a>
       </div>
     </div>
@@ -44,7 +44,7 @@
     <div class="row">
       <div class="col-sm-4">
         <div class="thumbnail">
-          <img src="/assets/course-1.png">
+          <%= image_tag("course-1.png") %>
           <p><strong><%= t "course_name" %></strong></p>
           <p><%= t "course_date_published" %></p>
           <button id="navbar-btn" class="btn"><%= t "button_learn" %></button>
@@ -52,7 +52,7 @@
       </div>
       <div class="col-sm-4">
         <div class="thumbnail">
-          <img src="/assets/course-2.png">
+          <%= image_tag("course-1.png") %>
           <p><strong><%= t "course_name" %></strong></p>
           <p><%= t "course_date_published" %></p>
           <button class="btn"><%= t "button_learn" %></button>
@@ -60,7 +60,7 @@
       </div>
       <div class="col-sm-4">
         <div class="thumbnail">
-          <img src="/assets/course-1.png">
+          <%= image_tag("course-1.png") %>
           <p><strong><%= t "course_name" %></strong></p>
           <p><%= t "course_date_published" %></p>
           <button class="btn"><%= t "button_learn" %></button>
@@ -70,7 +70,7 @@
     <div class="row">
       <div class="col-sm-4">
         <div class="thumbnail">
-          <img src="/assets/course-1.png">
+          <%= image_tag("course-2.png") %>
           <p><strong><%= t "course_name" %></strong></p>
           <p><%= t "course_date_published" %></p>
           <button class="btn"><%= t "button_learn" %></button>
@@ -78,7 +78,7 @@
       </div>
       <div class="col-sm-4">
         <div class="thumbnail">
-          <img src="/assets/course-2.png">
+          <%= image_tag("course-2.png") %>
           <p><strong><%= t "course_name" %></strong></p>
           <p><%= t "course_date_published" %></p>
           <button class="btn"><%= t "button_learn" %></button>
@@ -86,7 +86,7 @@
       </div>
       <div class="col-sm-4">
         <div class="thumbnail">
-          <img src="/assets/course-1.png">
+          <%= image_tag("course-2.png") %>
           <p><strong><%= t "course_name" %></strong></p>
           <p><%= t "course_date_published" %></p>
           <button class="btn"><%= t "button_learn" %></button>

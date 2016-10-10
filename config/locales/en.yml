@@ -6,10 +6,10 @@ en:
   base_title: "Elearning - Simple tool for learning everything!"
   slogan: "Simple tools for learning anything"
   banner_description: "Search millions of study sets or create your own. Improve your grades
-         by studying with flashcards, games and more"
+    by studying with flashcards, games and more"
   background_1_title: "LANGUAGES"
   background_1_quotes: "One language sets you in a corridor for life. Two
-     languages open every door along the way."
+    languages open every door along the way."
   background_1_quotes_author: "Frank Smith"
   english: "English"
   japan: "日本語"
@@ -17,7 +17,7 @@ en:
   background_2_title: "1000,000 Study Sets and Counting"
   background_2_quotes: "More than 95% of students who learn with E-learning improved their grades
     . See how E-learning's simple tools can help you learn anything, from
-     beginning algebra, to college level econometrics — and beyond"
+    beginning algebra, to college level econometrics — and beyond"
   course_name: "Course 1"
   course_date_published: "Mon. 8 October 2016"
   button_learn: "Learn!"
@@ -34,5 +34,5 @@ en:
   E-learning is a place where everyone can share knowledge in any subject,
   at any level and gain confidence as a learner."
   help: "Welcome to Quizlet! Quizlet provides free study tools for students,
-   teachers, and learners of all ages that can be used in and out of the
+    teachers, and learners of all ages that can be used in and out of the
     classroom."
