@@ -36,3 +36,14 @@ en:
   help: "Welcome to Quizlet! Quizlet provides free study tools for students,
     teachers, and learners of all ages that can be used in and out of the
     classroom."
+  signup_or: "SIGN UP OR"
+  form_contain: "The form contains"
+  error:  "Error"
+  sign_up: "Sign Up"
+  username: "Username"
+  e_mail: "E-mail"
+  password: "Password"
+  password_confirmation: "Password confirmation"
+  create_accout: "Create my account"
+  record_isnt_exist: "Record isn't exist"
+  welcome: "Welcome to E-Learning"
