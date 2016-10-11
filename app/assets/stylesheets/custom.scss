@@ -1,5 +1,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
 .navbar {
   margin-bottom: 0;
   background-color: #4257B2;
@@ -11,58 +12,73 @@
   "Fira Sans", "Droid Sans", "Helvetica Neue",
   sans-serif;
 }
+
 .navbar li a, .navbar .navbar-brand {
   color: #FFFFFF !important;
 }
+
 .navbar-nav li a:hover {
   color: #fff !important;
 }
+
 .navbar-nav li.active a {
   color: #fff !important;
   background-color:#FFFFFF !important;
 }
+
 .navbar-default .navbar-toggle {
   border-color: transparent;
 }
+
 .open .dropdown-toggle {
   color: #fff ;
   background-color: #555 !important;
 }
+
 .dropdown-menu li a {
   color: #000 !important;
 }
+
 .dropdown-menu li a:hover {
   background-color: red !important;
 }
+
 .carousel-inner img {
   width: 100%; /* Set width to 100% */
   margin: auto;
 }
+
 .carousel-caption h3 {
   color: #fff !important;
 }
+
 @media (max-width: 600px) {
   .carousel-caption {
     display: none;
   }
 }
+
 .list-group-item:first-child {
   border-top-right-radius: 0;
   border-top-left-radius: 0;
 }
+
 .list-group-item:last-child {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
+
 .thumbnail {
   padding: 0 0 10px 0;
   border: none;
   border-radius: 0;
 }
+
 .thumbnail p {
   margin-top: 5px;
   color: #555;
 }
+
 .btn {
   padding: 10px 20px;
   background-color: #3CCFCF;
@@ -70,16 +86,19 @@
   border-radius: 0;
   transition: .2s;
 }
+
 .btn:hover, .btn:focus {
   border: 1px solid #333;
   background-color: #fff;
   color: #000;
 }
+
 .bg-1 {
   padding: 80px 0;
   background: #FFFFFF;
   color: #455358;
 }
+
 .bg-1 h3 {color: #455358;}
 .bg-1 p {font-style: italic;}
 .bg-2 {
@@ -87,6 +106,7 @@
   background: #EFEFEF;
   color: #455358;
 }
+
 .bg-2 h3 {
 color: #455358;
 font-weight: 700;
@@ -101,14 +121,17 @@ line-height: 1.142857142857143;
   height: 80%;
   opacity: 0.7;
 }
+
 .person:hover {
   border-color: #f1f1f1;
 }
+
 footer {
   background-color: #4257B2;
   color: #FFFFFF;
   padding: 32px;
 }
+
 footer a {
   color: #FFFFFF;
 }
@@ -116,9 +139,198 @@ footer a:hover {
   color: #777;
   text-decoration: none;
 }
+
 footer container a{
   text-align: left;
 }
+
 footer ul li{
   padding-top: 20px;
+}
+
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}
+
+/* sidebar */
+
+aside {
+  section.user_info {
+    margin-top: 80px;
+  }
+  section {
+    padding: 10px 0;
+    margin-top: 20px;
+    &:first-child {
+      border: 0;
+      padding-top: 0;
+    }
+    span {
+      display: block;
+      margin-bottom: 3px;
+      line-height: 1;
+    }
+    h1 {
+      font-size: 1.4em;
+      text-align: left;
+      letter-spacing: -1px;
+      margin-bottom: 3px;
+      margin-top: 0px;
+    }
+  }
+}
+
+.gravatar {
+  float: left;
+  margin-right: 10px;
+}
+
+.gravatar_edit {
+  margin-top: 15px;
+}
+
+/* forms */
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+  @include box_sizing;
+}
+
+input {
+  height: auto !important;
+}
+
+#error_explanation {
+  color: red;
+  ul {
+    color: red;
+    margin: 0 0 30px 0;
+  }
+}
+
+.field_with_errors {
+  @extend .has-error;
+  .form-control {
+    color: $state-danger-text;
+  }
+}
+
+/*css login*/
+@media (min-width: 768px) {
+  .omb_row-sm-offset-3 div:first-child[class*="col-"] {
+    margin-left: 25%;
+  }
+}
+.content {
+  height: 700px;
+  background-image: image-url("background_signup_login.png");
+  background-size: cover;
+  background-position: top center !important;
+  background-repeat: no-repeat !important;
+  min-height: 100%;
+  background-color: #fff;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+}
+
+.label_text {
+  color: red;
+  ont-size: 18px;
+}
+
+.omb_login {
+  padding-top: 100px;
+}
+
+.omb_login .omb_authTitle {
+    text-align: center;
+  line-height: 300%;
+}
+
+.omb_login .omb_socialButtons a {
+  color: white; // In yourUse @body-bg
+  opacity:0.9;
+}
+
+.omb_login .omb_socialButtons a:hover {
+    color: white;
+  opacity:1;
+}
+
+.omb_login .omb_socialButtons .omb_btn-facebook {
+  background: #3b5998;
+}
+
+.omb_login .omb_socialButtons .omb_btn-twitter {
+  background: #00aced;
+}
+
+.omb_login .omb_socialButtons .omb_btn-google {
+  background: #c32f10;
+}
+
+.omb_login .omb_loginOr {
+  position: relative;
+  font-size: 1.5em;
+  color: #aaa;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+.omb_login .omb_loginOr .omb_hrOr {
+  background-color: #cdcdcd;
+  height: 1px;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+
+.omb_login .omb_loginOr .omb_spanOr {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: -0.6em;
+  margin-left: -1.5em;
+  background-color: white;
+  width: 3em;
+  text-align: center;
+}
+
+.btn-block {
+  padding: 5px 10px;
+  background-color: #3CCFCF;
+  color: #f1f1f1;
+  border-radius: 0;
+}
+
+.omb_login .omb_loginForm .input-group.i {
+  width: 2em;
+}
+
+.checkbox {
+  color: #3b5998;
+}
+
+@media (min-width: 768px) {
+  .omb_login .omb_forgotPwd {
+    text-align: right;
+    margin-top:10px;
+  }
+}
+
+.alert {
+  margin-top: 50px;
+  margin-bottom: -50px;
 }
