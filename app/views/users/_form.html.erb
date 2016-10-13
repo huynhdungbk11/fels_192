@@ -1,0 +1,17 @@
+<%= form_for(@user) do |f| %>
+  <%= render "shared/error_messages", object: f.object %>
+
+  <%= f.text_field :name, class: "form-control",
+    placeholder: t("username") %>
+
+  <%= f.text_field :email, class: "form-control",
+    placeholder: t("e_mail") %>
+
+  <%= f.password_field :password, class: "form-control",
+    placeholder: t("password") %>
+
+  <%= f.password_field :password_confirmation, class: "form-control",
+    placeholder: t("password_confirmation") %>
+  <%= f.submit yield(:button_text), class: "btn-lg btn-primary btn-sglg" %>
+<% end %>
+
