@@ -113,6 +113,7 @@ font-weight: 700;
 font-size: 3.5rem;
 line-height: 1.142857142857143;
 }
+
 .bg-2 p {font-style: italic;}
 .person {
   border: 10px solid transparent;
@@ -347,4 +348,14 @@ input {
 .alert {
   margin-top: 50px;
   margin-bottom: -50px;
+}
+
+.alert-form {
+  padding: 10px 0px;
+  border: 1px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
 }
