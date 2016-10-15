@@ -359,3 +359,60 @@ input {
     -o-border-radius: 5px;
     border-radius: 5px;
 }
+
+.category_content {
+  margin-top: 200px;
+}
+
+.category{
+  margin-top: 70px;
+}
+
+.category_img_index {
+  height: 150px !important;
+}
+
+.category_img_show {
+  height: 400px !important;
+  width: 350px;
+}
+
+.button_inline{
+  text-align: center;
+  margin-bottom :10px;
+}
+
+.button{
+  padding: 5px;
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  line-height: 50px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+.button_view {
+  background-color: #52B3D6;
+}
+
+.button_edit {
+  background-color: #77CC38;
+}
+
+.button_delete {
+  background-color: #d46d45;
+}
+
+.button_back {
+  background-color: #F3CA28;
+}
+
+.show_img {
+  margin-top: 100px;
+}
+
+.category-info{
+  padding-bottom: 50px;
+}
+

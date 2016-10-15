@@ -10,4 +10,12 @@ class ApplicationController < ActionController::Base
       redirect_to root_url
     end
   end
+
+  def load_category
+    @category = Category.find_by id: params[:id]
+    unless @category
+      flash[:warning] = t "category_isnt_exist"
+      redirect_to root_url
+    end
+  end
 end
