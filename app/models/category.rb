@@ -4,6 +4,7 @@ class Category < ApplicationRecord
 
   scope :update_desc,->{order updated_at: :desc}
   scope :search,->(search){where("name LIKE ?", "%#{search}%").update_desc}
+  scope :alphabetically,->{order name: :asc}
 
   has_attached_file :category_img, styles: {category_index: "250x200",
     category_show: "400x350" }, default_url: "/images/:style/missing.png"
