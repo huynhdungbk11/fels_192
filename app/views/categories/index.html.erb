@@ -1,0 +1,20 @@
+<div class="container category">
+  <div class="search-form">
+  </div>
+  <div class="row">
+    <% @categories.each do |category| %>
+      <div class="col-sm-3">
+        <div class="thumbnail">
+          <%= image_tag category.category_img.url(:category_index),
+            class: "category_img_index"%>
+          <h4 class="text-center"><%= category.name %></h4>
+          <div class="button_inline">
+            <%= link_to t("start_lesson"), admin_category_path(category),
+              class: "button_view button" %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+    <%= will_paginate @categories %>
+  </div>
+</div>

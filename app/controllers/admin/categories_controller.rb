@@ -6,7 +6,7 @@ class Admin::CategoriesController < ApplicationController
     if params[:search]
       @categories = Category.search params[:search]
     else
-      @categories = Category.update_desc
+      @categories = Category.alphabetically
     end
     @categories = @categories.paginate(page: params[:page])
       .per_page Settings.per_page.category

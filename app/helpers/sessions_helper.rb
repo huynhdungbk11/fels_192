@@ -13,6 +13,10 @@ module SessionsHelper
     current_user.present?
   end
 
+  def logged_as_admin?
+    current_user.is_admin?
+  end
+
   def log_out
     session.delete :user_id
     @current_user = nil
