@@ -1,5 +1,4 @@
-<!-- Menu Toggle Script -->
-$(document).ready(function(){
+document.addEventListener('turbolinks:load', function() {
   $('#menu-toggle').click(function(e) {
     e.preventDefault();
     $('#wrapper').toggleClass('toggled');

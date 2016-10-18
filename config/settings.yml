@@ -1,4 +1,5 @@
 per_page:
   category: 8
   users: 10
-
+  words: 10
+limit_content: 2

@@ -1,6 +1,10 @@
 <% provide :title, t("all_user_title") %>
 <div id="wrapper" >
-  <%= render "layouts/admin/menu.html.erb" %>
+  <% if current_user.is_admin? && !current_user.is_user?(@user) %>
+    <%= render "layouts/admin/menu.html.erb" %>
+  <% else %>
+    <%= render "layouts/menu.html.erb" %>
+  <% end %>
   <div id="page-content-wrapper">
     <div class="container-fluid">
       <div class="row">
@@ -16,7 +20,7 @@
                   <span class="w3-xlarge"><%= link_to user.name, user %></span>
                   <br>
                   <span><%= t "name_user_member" %></span>
-                  <% if current_user.is_admin? && !user.is_user?(user) %>
+                  <% if current_user.is_admin? && !current_user.is_user?(user) %>
                     | <%= link_to t(:delete_user), user, method: :delete,
                     data: {confirm: t(:"sure_delete")} %>
                   <% end %>
