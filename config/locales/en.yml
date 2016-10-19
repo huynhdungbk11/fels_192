@@ -1,3 +1,8 @@
+date:
+  formats:
+    default: "%d-%m-%Y"
+    long: "%B, %d, %Y - %H:%M"
+    short: "%b %d"
 en:
   home:  "HOME"
   header_log_in: "LOG IN"
@@ -48,6 +53,7 @@ en:
   create_account: "Create my account"
   update_account: "Update your account"
   record_isnt_exist: "Record isn't exist"
+  lesson_isnt_exist: "Lesson isn't exist"
   welcome: "Welcome to E-Learning"
   invalid: "Invalid email/password combination"
   sample_app: "E-learning"
@@ -120,3 +126,5 @@ en:
   word_framgia_list: "List words of framgia e learning "
   word_framgia_url: "http://recruit.framgia.vn/"
   word_framgia_home: "Home Framgia"
+  lesson_title: "Learning lessons"
+  lesson_finish: "Finish"

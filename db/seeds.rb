@@ -8,11 +8,27 @@ User.create!(name: "Example User",
   password: "foobar",
   password_confirmation: "foobar",
   is_admin: true)
-99.times do |n|
+5.times do |n|
   name = Faker::Name.name
   email = "example-#{n+1}@railstutorial.org"
   password = "password"
   User.create!(name: name, email: email,
   password: password,
   password_confirmation: password)
+end
+
+5.times do
+  name  = Faker::Name.name
+  description = Faker::Lorem.sentence
+  Category.create! name: name, description: description
+end
+
+categories = Category.take(5)
+
+categories.each do |category|
+  15.times do
+    name = Faker::Name.name
+    content = Faker::Lorem.sentence
+    Word.create! name: name, content: content, category_id: category.id
+  end
 end

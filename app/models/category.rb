@@ -2,9 +2,9 @@ class Category < ApplicationRecord
   has_many :lessons, dependent: :destroy
   has_many :words, dependent: :destroy
 
-  scope :update_desc,->{order updated_at: :desc}
-  scope :search,->(search){where("name LIKE ?", "%#{search}%").update_desc}
-  scope :alphabetically,->{order name: :asc}
+  scope :update_desc, ->{order updated_at: :desc}
+  scope :search, ->search {where("name LIKE ?", "%#{search}%").update_desc}
+  scope :alphabetically, ->{order :name}
 
   has_attached_file :category_img, styles: {category_index: "250x200",
     category_show: "400x350" }, default_url: "/images/:style/missing.png"

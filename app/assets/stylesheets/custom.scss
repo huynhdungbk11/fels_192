@@ -409,6 +409,14 @@ input {
   background-color: #F3CA28;
 }
 
+.button_start {
+  background-color: #52B3D6;
+  padding: 2px 10px;
+  color: white;
+  text-align: center;
+  font-size: 18px;
+}
+
 .show_img {
   margin-top: 100px;
 }
@@ -417,7 +425,6 @@ input {
   padding-bottom: 50px;
 }
 
-/*admin home css*/
  body {
     overflow-x: hidden;
  }
@@ -467,7 +474,6 @@ input {
   margin-right: -250px;
 }
 
-/* Sidebar Styles */
 .sidebar-nav {
   position: absolute;
   top: 0;
@@ -606,4 +612,8 @@ ul.w3-ul li:last-child {
       text-align: center;
     }
   }
+}
+
+.lessons{
+  padding-top: 100px;
 }

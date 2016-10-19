@@ -1,0 +1,16 @@
+<% provide :title, @lesson.category.name %>
+<div class="container">
+  <div class="lessons">
+    <%= form_for [:category, @lesson] do |f| %>
+      <%= f.fields_for :results do |result| %>
+        <ul>
+          <p ><%= t "question" %> <%= result.index + 1 %>:</p>
+          <h4 ><%= result.object.word.content %></h4>
+        </ul>
+      <% end %>
+      <div class ="submit">
+        <%= f.submit t "lesson_finish", class: "btn btn-primary" %>
+      </div>
+    <% end %>
+  </div>
+</div>
