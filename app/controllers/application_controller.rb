@@ -19,6 +19,14 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def load_word
+    @word = Word.find_by id: params[:id]
+    unless @word
+      flash[:warning] = t "word_isnt_exist"
+      redirect_to root_url
+    end
+  end
+
   def logged_in_user
     unless logged_in?
       flash[:danger] = t "pl_login"
