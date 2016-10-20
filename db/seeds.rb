@@ -1,7 +1,8 @@
 User.create! name: "HuynhDung", email: "huynhdung@gmail.com", password: "111111",
   password_confirmation: "111111", is_admin: true
-User.create! name: "user1", email: "user1@gmail.com", password: "111111",
-  password_confirmation: "111111", is_admin: false
+User.create! name: "NgoVanTien", email: "ngovantien93@gmail.com",
+  password: "123456789",
+  password_confirmation: "123456789", is_admin: true
 User.create!(name: "Example User",
   email: "example@railstutorial.org",
   password: "foobar",
