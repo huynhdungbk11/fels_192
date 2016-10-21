@@ -1,16 +1,40 @@
 <% provide :title, @lesson.category.name %>
 <div class="container">
-  <div class="lessons">
-    <%= form_for [:category, @lesson] do |f| %>
-      <%= f.fields_for :results do |result| %>
-        <ul>
-          <p ><%= t "question" %> <%= result.index + 1 %>:</p>
-          <h4 ><%= result.object.word.content %></h4>
-        </ul>
+  <div class="lesson_form">
+    <div class="responsive-table">
+      <%= form_for [@lesson.category, @lesson] do |f| %>
+        <table class="table table-striped table-bordered width-100" cellspacing="0">
+          <%= f.fields_for :results do |builder| %>
+            <tr>
+              <th colspan="3"><%= builder.index + 1 %><%= t "dot" %>
+                <%= builder.object.word.content %></th>
+            </tr>
+            <% builder.object.word.answers.each do |answer| %>
+              <tr>
+                <td><%= answer.answer_content %></td>
+                <td><%= builder.radio_button :answer_id, answer.id %></td>
+                <td>
+                  <% if answer == builder.object.answer &&
+                   @lesson.errors.empty? %>
+                    <% if answer.is_correct? %>
+                      <%= t "right_answer" %>
+                    <% else %>
+                      <%= t "wrong_answer" %>
+                    <% end %>
+                  <% end %>
+                </td>
+              </tr>
+            <% end %>
+          <% end %>
+        </table>
+        <% if @lesson.results.count_correct_answer == Settings.per_lesson.words %>
+          <% @lesson.update_attributes is_finished: true %>
+        <% else %>
+          <div class="submit">
+            <%= f.submit t "lesson_finish", class: "button" %>
+          </div>
+        <% end %>
       <% end %>
-      <div class ="submit">
-        <%= f.submit t "lesson_finish", class: "btn btn-primary" %>
-      </div>
-    <% end %>
+    </div>
   </div>
 </div>

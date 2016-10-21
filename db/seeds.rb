@@ -27,8 +27,17 @@ categories = Category.take(5)
 
 categories.each do |category|
   15.times do
-    name = Faker::Name.name
+    name = Faker::Lorem.word
     content = Faker::Lorem.sentence
     Word.create! name: name, content: content, category_id: category.id
+  end
+end
+
+words = Word.take(75)
+words.each do |word|
+  right_answer = rand(0..3)
+  4.times do |i|
+    answer = Faker::Lorem.word
+    Answer.create! answer_content: answer, is_correct: i == right_answer, word_id: word.id
   end
 end

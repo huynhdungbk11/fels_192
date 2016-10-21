@@ -46,6 +46,7 @@ ActiveRecord::Schema.define(version: 20161013083807) do
     t.boolean  "learned"
     t.integer  "category_id"
     t.integer  "user_id"
+    t.boolean  "is_finished", default: false
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.index ["category_id"], name: "index_lessons_on_category_id"

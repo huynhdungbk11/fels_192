@@ -6,7 +6,7 @@ per_page:
 limit_content: 2
 lesson: 10
 per_lesson:
-  words: 15
+  words: 5
 per_word:
   answers: 4
 
