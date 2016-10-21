@@ -2,4 +2,11 @@ per_page:
   category: 8
   users: 10
   words: 10
+  lesson: 10
 limit_content: 2
+lesson: 10
+per_lesson:
+  words: 15
+per_word:
+  answers: 4
+

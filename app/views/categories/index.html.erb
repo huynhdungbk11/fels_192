@@ -1,6 +1,4 @@
 <div class="container category">
-  <div class="search-form">
-  </div>
   <div class="row">
     <% @categories.each do |category| %>
       <div class="col-sm-3">
@@ -9,8 +7,9 @@
             class: "category_img_index"%>
           <h4 class="text-center"><%= category.name %></h4>
           <div class="button_inline">
-            <%= link_to t("start_lesson"), admin_category_path(category),
-              class: "button_view button" %>
+            <%= link_to t("start_lesson"),
+              category_lessons_path(category),
+              method: :post, class: "button_view button" %>
           </div>
         </div>
       </div>

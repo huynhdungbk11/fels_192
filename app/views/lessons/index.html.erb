@@ -1,0 +1,34 @@
+<% provide :title, t("lesson_title") %>
+<div class="container">
+  <div class="lessons">
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th><%= t "lesson_create_at" %></th>
+            <th><%= t "lesson_category" %></th>
+            <th><%= t "lesson_score" %></th>
+            <th><%= t "lesson_action" %></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @lessons.each do |lesson| %>
+            <tr>
+              <td>
+                <%= l lesson.created_at, format: :long %>
+              </td>
+              <td><%= lesson.category.name %></td>
+              <td></td>
+              <td>
+                <%= link_to t("start"),
+                  edit_category_lesson_path(lesson.category, lesson),
+                  class: "button_start" %>
+              </td>
+            </tr>
+          <% end %>
+          <%= will_paginate @lessons %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

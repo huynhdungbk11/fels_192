@@ -12,4 +12,7 @@ Rails.application.routes.draw do
   resources :users
   resources :categories, only: [:index]
   resources :words, only: [:index, :show]
+  resources :categories do
+    resources :lessons
+  end
 end
