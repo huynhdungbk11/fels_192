@@ -607,3 +607,44 @@ ul.w3-ul li:last-child {
     }
   }
 }
+
+.right_form{
+    float: right;
+    background: lightblue;
+    margin-left: 5px;
+    width: 72%;
+    background: #F1F1F1;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-size: 15px;
+    font-family: 'Source Sans Pro', sans-serif;
+    .timeline {
+      list-style: none;
+      li{
+        margin-bottom: 60px;
+        overflow: hidden;
+        margin: 0;
+        position: relative;
+        .timeline-date {
+          width: 110px;
+          float: left;
+        }
+        .timeline-content {
+          width: 75%;
+          float: left;
+          border-left: 3px #e5e5d1 solid;
+          padding-left: 30px;
+        }
+        .timeline-content:before {
+          content: "";
+          width: 12px;
+          height: 12px;
+          background: #6fc173;
+          position: absolute;
+          left: 106px;
+          top: 24px;
+          border-radius: 100%;
+        }
+      }
+}}
