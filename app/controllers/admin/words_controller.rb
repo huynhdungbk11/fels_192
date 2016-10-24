@@ -1,11 +1,27 @@
 class Admin::WordsController < ApplicationController
   before_action :logged_in_user, :logged_in_as_admin
-  before_action :load_data, only: [:create, :index]
-  before_action :load_word, only: :destroy
+  before_action :load_data, only: [:create, :index, :edit]
+  before_action :load_word, only: [:destroy, :show, :edit, :update]
 
   def index
     @word = Word.new
     @word.answers.build
+  end
+
+  def show
+    @answers = @word.answers.all
+  end
+
+  def edit
+  end
+
+  def update
+    if @word.update_attributes word_params
+      flash[:success] = t "flash.edit_success"
+      redirect_to admin_words_path @word
+    else
+      render :edit
+    end
   end
 
   def create
@@ -30,7 +46,7 @@ class Admin::WordsController < ApplicationController
   private
     def word_params
       params.require(:word).permit :name, :content, :category_id,
-        answers_attributes: [:answer_content, :is_correct]
+        answers_attributes: [:id, :answer_content, :is_correct, :_destroy]
     end
 
     def load_data

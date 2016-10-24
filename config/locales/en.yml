@@ -149,3 +149,7 @@ en:
   wrong_answer: "Wrong answer"
   create_lesson: "Create lesson"
   finish_lesson: "Finish lesson"
+  remove: "Remove"
+  answer_table_answer: "Answer"
+  answer_table_answertf: "Result"
+  answer_show_all: "All Answers"

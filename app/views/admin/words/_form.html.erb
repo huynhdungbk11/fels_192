@@ -14,6 +14,8 @@
           placeholder: t("answer_content") %>
         <%= af.check_box :is_correct, class: "form-checkbox" %>
         <p><%= t("true_answer") %></p>
+        <%= af.check_box :_destroy, class: "checkbox-remove" %>
+        <p1><%= t("remove") %></p1>
       <% end %>
       <button type="button"
         class="btn btn-success text-center add-answer"><%= t "btn_add_answer" %>
