@@ -29,11 +29,15 @@
         </table>
         <% if @lesson.results.count_correct_answer == Settings.per_lesson.words %>
           <% @lesson.update_attributes is_finished: true %>
-        <% else %>
-          <div class="submit">
-            <%= f.submit t "lesson_finish", class: "button" %>
-          </div>
         <% end %>
+        <div class="button_inline row">
+          <div class="col-sm-6">
+            <%= f.submit class: "lesson_button_start" %>
+          </div>
+          <div class="col-sm-6 lesson_button_back">
+            <%= link_to t("back"), lessons_path %>
+          </div>
+        </div>
       <% end %>
     </div>
   </div>

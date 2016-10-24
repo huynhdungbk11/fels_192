@@ -18,11 +18,16 @@
                 <%= l lesson.created_at, format: :long %>
               </td>
               <td><%= lesson.category.name %></td>
-              <td></td>
               <td>
-                <%= link_to t("start"),
-                  edit_category_lesson_path(lesson.category, lesson),
-                  class: "button_start" %>
+                <%= lesson.results.count_correct_answer %>
+                <%= t "slash" %>
+                <%= Settings.per_lesson.words %></td>
+              <td class="button_inline">
+                <%= lesson_status lesson %>
+                <%= link_to t("delete"),
+                  lesson_path(lesson),
+                  class: "lesson_button_delete", method: :delete,
+                  data: {confirm: t("delete_message")} %>
               </td>
             </tr>
           <% end %>

@@ -407,12 +407,38 @@ input {
   background-color: #F3CA28;
 }
 
-.button_start {
+.lesson_button_start {
   background-color: #52B3D6;
   padding: 2px 10px;
   color: white;
   text-align: center;
   font-size: 18px;
+}
+
+.lesson_button_view {
+  background-color: #77CC38;
+  padding: 2px 10px;
+  color: white;
+  text-align: center;
+  font-size: 18px;
+}
+
+.lesson_button_delete {
+  background-color: #d46d45;
+  padding: 2px 10px;
+  color: white;
+  text-align: center;
+  font-size: 18px;
+}
+
+.lesson_button_back{
+  background-color: #F3CA28;
+  text-align: center;
+  font-size: 18px;
+  padding: 3px 0px;
+  a {
+    color: white !important;
+  }
 }
 
 .button_finish {
@@ -559,7 +585,6 @@ input {
   }
 }
 
-/*style all user*/
 .w3-container:after {
   content: "";
   display: table;
