@@ -1,6 +1,7 @@
 class Word < ApplicationRecord
   belongs_to :category
   has_many :lessons, through: :result
+  has_many :answers, dependent: :destroy
   has_many :results
   has_many :answers, dependent: :destroy, inverse_of: :word
 

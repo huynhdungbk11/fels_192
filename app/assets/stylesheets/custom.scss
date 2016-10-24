@@ -158,8 +158,6 @@ footer ul li{
   box-sizing: border-box;
 }
 
-/* sidebar */
-
 aside {
   section.user_info {
     margin-top: 80px;
@@ -195,7 +193,6 @@ aside {
   margin-top: 15px;
 }
 
-/* forms */
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
   width: 100%;
@@ -222,7 +219,6 @@ input {
   }
 }
 
-/*css login*/
 @media (min-width: 768px) {
   .omb_row-sm-offset-3 div:first-child[class*="col-"] {
     margin-left: 25%;
@@ -419,6 +415,10 @@ input {
   font-size: 18px;
 }
 
+.button_finish {
+  background-color: #F3CA28;
+}
+
 .show_img {
   margin-top: 100px;
 }
@@ -431,7 +431,6 @@ input {
     overflow-x: hidden;
  }
 
-/* Toggle Styles */
 #wrapper {
   margin-top: 50px;
   padding-left: 0;
@@ -614,6 +613,10 @@ ul.w3-ul li:last-child {
       text-align: center;
     }
   }
+}
+
+.lesson_form{
+  padding-top: 100px;
 }
 
 .lessons{
