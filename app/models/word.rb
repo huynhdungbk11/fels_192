@@ -15,5 +15,6 @@ class Word < ApplicationRecord
   end
   validates :name, presence: true, length: {maximum: 140}
   validates :content, presence: true
-  accepts_nested_attributes_for :answers, allow_destroy: true
+  accepts_nested_attributes_for :answers, allow_destroy: true,
+    reject_if: proc {|attribute| attribute[:answer_content].blank?}
 end

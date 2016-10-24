@@ -1,0 +1,20 @@
+<% provide :title, t("word_show_title") %>
+<div id="wrapper" >
+  <%= render "layouts/admin/menu.html.erb" %>
+  <div id="page-content-wrapper">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="w3-container">
+            <div class="row w3-ul w3-card-4">
+              <br><h1><%= t "admin_word_create_new" %></h1>
+              <div class="form-group">
+                <%= render "form" %>
+              </div><br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
