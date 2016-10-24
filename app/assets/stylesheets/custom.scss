@@ -80,12 +80,14 @@
   color: #555;
 }
 
-.btn {
-  padding: 10px 20px;
-  background-color: #3CCFCF;
-  color: #f1f1f1;
-  border-radius: 0;
-  transition: .2s;
+.thumbnail {
+  .btn {
+    padding: 10px 20px;
+    background-color: #3CCFCF;
+    color: #f1f1f1;
+    border-radius: 0;
+    transition: .2s;
+  }
 }
 
 .btn:hover, .btn:focus {
@@ -616,4 +618,24 @@ ul.w3-ul li:last-child {
 
 .lessons{
   padding-top: 100px;
+}
+
+.box-answers {
+  p {
+    margin-right: -120px;
+    float: right;
+    margin-top: -40px;
+  }
+  .form-checkbox {
+    margin-right: -260px;
+    float: right;
+    margin-top: -40px;
+  }
+}
+
+.alert-sucess {
+  margin-bottom: -50px;
+  background-color: #dff0d8;
+  width: 200px;
+  float: right;
 }

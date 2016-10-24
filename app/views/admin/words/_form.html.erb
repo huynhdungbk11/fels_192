@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+  <%= form_for [:admin, @word] do |f| %>
+    <%= render "shared/error_messages", object: f.object %>
+    <%= f.select :category_id,
+      @categories.collect { |p| [ p.name, p.id ] }, {}, {class: "form-control"} %>
+    <%= f.text_field :name, class: "form-control",
+      placeholder: t("word_name") %>
+    <%= f.text_area :content, class: "form-control",
+      placeholder: t("word_description") %>
+    <div class="form-group box-answers">
+      <%= f.fields_for :answers do |af| %>
+        <%= af.text_field :answer_content, class: "form-control",
+          placeholder: t("answer_content") %>
+        <%= af.check_box :is_correct, class: "form-checkbox" %>
+        <p><%= t("true_answer") %></p>
+      <% end %>
+      <button type="button"
+        class="btn btn-success text-center add-answer"><%= t "btn_add_answer" %>
+      </button>
+    </div>
+    <%= f.submit t("post_word"), class: "btn btn-primary text-center" %>
+  <% end %>
+  </div>
+</div>

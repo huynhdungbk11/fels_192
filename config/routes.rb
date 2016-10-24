@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   namespace :admin do
     resources :categories
+    resources :words
     root "static_pages#home"
   end
   root "static_pages#home"
