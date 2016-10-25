@@ -1,6 +1,6 @@
 class LessonsController < ApplicationController
   before_action :logged_in_user
-  before_action :load_lesson, only: [:edit, :update]
+  before_action :load_lesson, only: [:edit, :update, :destroy]
   before_action :load_category, only: [:edit, :update, :create]
 
   def index
@@ -31,6 +31,15 @@ class LessonsController < ApplicationController
   end
 
   def show
+  end
+
+  def destroy
+    if @lesson.destroy
+      flash[:sucess] = t "lesson_deleted_success"
+    else
+      flash[:danger] = t "lesson_deleted_fail"
+    end
+    redirect_to lessons_path
   end
 
   private

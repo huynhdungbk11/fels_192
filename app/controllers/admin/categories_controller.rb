@@ -17,6 +17,8 @@ class Admin::CategoriesController < ApplicationController
   end
 
   def show
+    @words = @category.words.order_name.paginate(page: params[:page])
+      .per_page Settings.per_page.words
   end
 
   def edit

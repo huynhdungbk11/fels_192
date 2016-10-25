@@ -27,3 +27,14 @@ config/environments/*.local.yml
 
 # Ignore application configuration
 /config/application.yml
+
+.byebug_history
+quit
+params[:category_id]
+@lesson
+@lession
+category_id
+quit
+lesson_params[:category_id]
+lesson_params
+:category_id

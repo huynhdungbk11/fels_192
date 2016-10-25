@@ -23,6 +23,9 @@
                 <li>
                   <%= link_to t(:header_categories), categories_path %>
                 </li>
+                <li>
+                  <%= link_to t(:header_lesson), lessons_path %>
+                </li>
               <% end %>
               <li><%= link_to @current_user.name, user_path(current_user) %></li>
               <li><%= link_to t(:header_home), root_path %></li>
