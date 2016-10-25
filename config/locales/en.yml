@@ -165,3 +165,8 @@ en:
   right_answer: "Right answer"
   wrong_answer: "Wrong answer"
   finish: "Finish"
+  activity_create_lesson: "Create lesson"
+  activity_update_lesson: "Update lesson"
+  activity_follow_lesson: "Follow user"
+  activity_unfollow_lesson: "Unfollow user"
+  ago: "ago"

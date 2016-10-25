@@ -10,6 +10,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    @activities = @user.activities.update_desc
   end
 
   def new

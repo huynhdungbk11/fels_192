@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20161013083807) do
     t.integer  "user_id"
     t.integer  "target_id"
     t.integer  "target_type"
-    t.string   "action_type"
+    t.integer  "action_type"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.index ["user_id"], name: "index_activities_on_user_id"
